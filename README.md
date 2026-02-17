@@ -127,9 +127,8 @@ pdf-rag-chatbot/
 ├── chroma_db/            # ← Auto-created vector index (persistent)
 ├── app.py                # Original console interface
 ├── app_streamlit.py      # Streamlit web interface ⭐
-├── index_pdfs.py         # Indexing script
 ├── requirements.txt      # Dependencies
-├── .env.example          # Example environment file
+├── .env          # Example environment file
 └── README.md             # This file
 ```
 
@@ -139,18 +138,8 @@ pdf-rag-chatbot/
 
 ### First Time
 ```bash
-python3 index_pdfs.py      # Build the index
+python3 app.py      # Build the index
 streamlit run app_streamlit.py  # Start chatting
-```
-
-### Adding New PDFs
-```bash
-# 1. Drop new PDFs in ./data folder
-# 2. Re-run indexing (deletes old, creates new)
-python3 index_pdfs.py
-
-# 3. Restart the app
-streamlit run app_streamlit.py
 ```
 
 ### Just Chatting (No Changes)
@@ -194,7 +183,7 @@ streamlit run app_streamlit.py  # Uses existing index
 ## ⚠️ Troubleshooting
 
 ### "Collection pdf_rag does not exist"
-**Solution:** Run `python3 index_pdfs.py` first
+**Solution:** Run `python3 app.py` first
 
 ### "GROQ_API_KEY not found"
 **Solution:** Add `.env` file with `GROQ_API_KEY=your_key`
@@ -203,7 +192,7 @@ streamlit run app_streamlit.py  # Uses existing index
 **Normal:** Large PDFs take time to embed. Grab coffee ☕
 
 ### Out of memory
-**Solution:** Process smaller PDFs or increase chunk overlap in `index_pdfs.py`
+**Solution:** Process smaller PDFs or increase chunk overlap in `app.py`
 
 ---
 
