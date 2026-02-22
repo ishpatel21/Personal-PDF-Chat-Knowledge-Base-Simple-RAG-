@@ -6,6 +6,8 @@ A fast, local-first Retrieval-Augmented Generation (RAG) chatbot that lets you a
 
 Powered by **LlamaIndex**, **Chroma** vector DB, **Groq** for ultra-fast inference, and **Streamlit** for a beautiful web interface.
 
+![App Demo](/docs/images/app-demo.png)
+
 ---
 
 ## ✨ Features
